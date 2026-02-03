@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --flex: flex;
+  --align-items-center: center;
+}
+
+header {
+  display: var(--flex);
+  gap: 10px;
+  align-items: var(--align-items-center);
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  padding: 25px;
+  background-color: #000000;
+}
+
+.header {
+  padding: 15px;
+  background-color: #1c1b1b;
+  border-radius: 30px;
+  display: var(--flex);
+  align-items: var(--align-items-center);
+  gap: 10px;
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-color: black;
+  flex: 1;
+  overflow: auto;
+}
+
+aside {
+  background-color: #1c1b1b;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+  height: fit-content;
+}
+
+header input {
+  outline: none;
+  font-size: 18px;
+  flex: 1;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.navbar {
+  padding: 25px;
+  width: 250px;
+  background-color: #1c1b1b
+}
+
+.navbar nav {
+  padding-top: 20px;
+  display: var(--flex);
+  gap: 10px;
+  flex-direction: column
+}
+
+.navbar nav a {
+  color: white;
+  background-color: #000000;
+  padding: 10px;
+  display: var(--flex);
+  align-items: var(--align-items-center);
+  gap: 8px;
+  border-radius: 4px
+}
+
+.navbar nav a:hover {
+  background-color: #606060;
+}
+
+.moviecardone {
+  background-color: #1c1b1b;
+  padding: 10px;
+  border-radius: 10px;
+  width: 210px;
+}
+
+.moviecardone img {
+  height: 260px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.moviecardone img:hover {
+  transform: scale(0.95);
+}
+
+.moviecardone h1,
+.moviecardtwo h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.moviecardone span,
+.moviecardtwo span,
+.moviecardthree span {
+  color: white;
+  display: var(--flex);
+  align-items: var(--align-items-center);
+  gap: 5px
+}
+
+.moviecardtwo {
+  border-radius: 10px;
+  width: 210px;
+}
+
+.moviecardtwo img {
+  height: 200px;
+  width: 100%;
+}
+
+/*movie car three*/
+.moviecardthree {
+  position: relative;
+  height: 400px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(38, 38, 38, 0.85);
+  border-radius: 10px;
+  padding: 25px;
+  transform: translateY(100%);
+  transition: transform 300ms ease;
+}
+
+.moviecardthree:hover .overlay {
+  transform: translateY(0);
+}
+
+.moviecardthree h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.info {
+  position: absolute;
+  bottom: 20px;
+}
+
+/*sidebar*/
+.sidebar {
+  display: var(--flex);
+  align-items: var(--align-items-center);
+  gap: 15px;
+  margin-bottom: 15px;
+
+}
+
+/*sub heading*/
+.subheading {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: -10px
+}
+
+.subheading h1 {
+  display: var(--flex);
+  align-items: var(--align-items-center);
+}
+
+/*Movie page */
+.moviecap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.movielists {
+  display: var(--flex);
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+
+/*movie details*/
+.moviedetails,
+.searchdetails {
+  display: var(--flex);
+  gap: 40px;
+  padding-top: 40px;
+}
+
+.searchdetails {
+  justify-content: space-between;
+}
+
+.moviedetails .duration {
+  padding-top: 10px;
+  align-items: var(--align-items-center);
+  display: var(--flex);
+  gap: 5px;
+}
+
+.searchview {
+  padding-bottom: 10px;
+  text-wrap: wrap;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+}
+
+h4 {
+  color: white;
+  padding: 5px 0px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+p {
+  color: white
+}
+
+hr {
+  border-color: rgb(138, 138, 138);
+}
+
+img {
+  object-fit: cover;
+}
+
+.menu {
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+
+/*home-hero*/
+.homehero {
+  height: 400px;
+  background-image: url(./images/cinema-film-roll-red-carpet-3d-illustration_252025-571.avif);
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.heroitem {
+  background-color: #0000006b;
+  padding: 30px;
+  height: 340px;
+  border-radius: 30px;
+  align-content: center;
+}
+
+.heroitem h1 {
+  font-size: 45px;
+}
+
+.heroitem p {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+.heroitem a {
+  background-color: #223f99;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  font-size: 20px;
+}
+
+.heroitem a:hover {
+  background-color: #2240999e;
+  transition: 200ms;
+}
+
+/*banner*/
+.banner {
+  height: 250px;
+  background-image: url(./images/cinema-film-roll-red-carpet-3d-illustration_252025-571.avif);
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banneritem {
+  background-color: #3030306b;
+  padding: 30px;
+  height: 190px;
+  border-radius: 30px;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.banneritem a {
+  color: white;
+}
+
+/*footer*/
+.footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.footer-top h2 {
+  margin-bottom: 5px;
+}
+
+.footer-top p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.footer-socials svg:hover {
+  color: #e50914;
+  /* Netflix red vibe */
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+
+/*mobile nav*/
+.mobilenav {
+  padding: 25px;
+  width: 200px;
+  background-color: #1c1b1b;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 1000ms ease;
+  z-index: 10000;
+  inset: 0;
+}
+
+.mobilenav nav {
+  padding-top: 20px;
+  display: var(--flex);
+  gap: 10px;
+  flex-direction: column
+}
+
+.mobilenav nav a {
+  color: white;
+  background-color: #000000;
+  padding: 10px;
+  display: var(--flex);
+  align-items: var(--align-items-center);
+  gap: 8px;
+  border-radius: 4px
+}
+
+.mobilenav nav a:hover {
+  background-color: #606060;
+}
+
+/*search list*/
+.searchlist {
+  flex: 2;
+  width: 70%
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 0px;
+}
+
+.searchresulttitle {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .menu {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .header {
+    width: fit-content;
+  }
+
+  .heroitem h1 {
+    font-size: 20px;
+  }
+
+  .homehero {
+    height: 300px;
+  }
+
+  .heroitem {
+    height: 240px;
+  }
+
+  .heroitem p {
+    font-size: 15px;
+  }
+
+  .moviedetails,
+  .searchdetails {
+    display: var(--flex);
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .searchlist {
+    flex: 2;
+    width: 100%
+  }
+
+  .sidebar img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .moviecap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding-top: 40px;
+  }
+
+  .searchresulttitle {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+
+  .banneritem h1 {
+    font-size: 18px !important;
+  }
+
+  .banner {
+    height: 180px;
+    background-image: url(./images/cinema-film-roll-red-carpet-3d-illustration_252025-571.avif);
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banneritem {
+    height: 120px;
+    font-size: 20px;
+  }
+
+  .banneritem a,
+  .banneritem span {
+    font-size: 15px;
+  }
+}
