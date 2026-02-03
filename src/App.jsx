@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-
+import Home from "./Pages/Home";
 import Movies from "./Pages/Movies";
 import MovieDetails from "./Pages/MovieDetails";
 import Navbar from "./components/Navbar";
@@ -26,6 +26,7 @@ function App() {
             <Header />
             <div style={{ padding: "25px" }}>
               <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/movies" element={<Movies />} />
                 <Route path="/movie/:id" element={<MovieDetails />} />
                 <Route path="/search" element={<Search />} />
