@@ -432,6 +432,7 @@ img {
 /* width */
 ::-webkit-scrollbar {
   height: 0px;
+  width: 0px;
 }
 
 .searchresulttitle {

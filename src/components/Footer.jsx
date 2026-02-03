@@ -24,7 +24,7 @@ function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <p>© {new Date().getFullYear()} MITC TV. Powered by TMDB.</p>
+                <p>© {new Date().getFullYear()} TakTube. Powered by TMDB.</p>
             </div>
         </footer>
     );

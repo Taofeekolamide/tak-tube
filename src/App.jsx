@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <NavToggle.Provider value={{ toggleNav, setToggleNav }}>
-        <div style={{ display: "flex", overflow: "hidden", height: "100vh" }}>
+        <div style={{ display: "flex", height: "100vh", width: "100%" }}>
 
           <Navbar />
           <MobileNav />
