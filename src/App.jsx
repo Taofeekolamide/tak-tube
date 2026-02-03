@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Movies from "./Pages/Movies";
-import MovieDetails from "./Pages/MovieDetails";
+import Movies from "./pages/Movies";
+import MovieDetails from "./pages/MovieDetails";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import './App.css'
-import Search from "./Pages/Search";
+import Search from "./pages/Search";
 import Footer from "./components/Footer";
 import NavToggle from "./components/Context";
 import { useState } from "react";
