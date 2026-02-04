@@ -1,16 +1,16 @@
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import Home from "./pages/Home";
-import Movies from "./pages/Movies";
-import MovieDetails from "./pages/MovieDetails";
+import Home from "./Pages/Home";
+import Movies from "./Pages/Movies";
+import MovieDetails from "./Pages/MovieDetails";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import './App.css'
-import Search from "./pages/Search";
+import Search from "./Pages/Search";
 import Footer from "./components/Footer";
 import NavToggle from "./components/Context";
 import { useEffect, useState } from "react";
 import MobileNav from "./components/MobileNav";
-import ErrorPage from "./Pages/ErrorPage";
+import ErrorPage from "./Pages/ErrorPage"
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
