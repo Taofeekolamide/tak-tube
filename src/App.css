@@ -23,7 +23,6 @@ header {
   background-color: #1c1b1b;
   border-radius: 50px;
   padding: 10px;
-  height: 20px;
 }
 
 header input {
@@ -31,6 +30,7 @@ header input {
   outline: none;
   color: #ffffff;
   border: none;
+  height: 30px;
 }
 
 .menu {
