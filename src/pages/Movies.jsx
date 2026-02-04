@@ -24,7 +24,7 @@ function Movies() {
                 ))}
             </div>
             <div className="movielists" >
-                {movies.map((item) => (
+                {movies.slice(2).map((item) => (
                     <Link to={`/movie/${item.id}`}>
                         <MovieCardTwo title={item.title} image={`https://image.tmdb.org/t/p/w500${item.poster_path}`} view={item.popularity} released_date={item.release_date} />
                     </Link>

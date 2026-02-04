@@ -4,10 +4,12 @@ import MovieCardOne from "../components/MovieCardOne";
 import MovieCardTwo from "../components/MovieCardTwo";
 import SubHeading from "../components/SubHeading";
 import { BiPlay } from "react-icons/bi";
+import MovieCardFour from "../components/MovieCardFour";
 
 function Home() {
     const [upcomingMovies, setUpcomingMovies] = useState([])
     const [TopRatedMovies, setTopRatedMovies] = useState([])
+    const [trendingMovies, setTrendingMovies] = useState([])
 
     useEffect(() => {
 
@@ -18,6 +20,10 @@ function Home() {
         fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4632cb4de4b1105d34dd3404eeb90acd")
             .then(res => res.json())
             .then(data => setTopRatedMovies(data.results))
+
+        fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=4632cb4de4b1105d34dd3404eeb90acd")
+            .then(res => res.json())
+            .then(data => setTrendingMovies(data.results))
     }, [])
 
     return (
@@ -33,8 +39,8 @@ function Home() {
 
             <SubHeading text="Upcoming" />
 
-            <div style={{ display: "flex", overflowX: "scroll", gap: "10px" }}>
-                {upcomingMovies.slice(0, 7).map((item) => (
+            <div style={{ display: "flex", overflowX: "scroll", gap: "10px", paddingBottom: "25px" }}>
+                {upcomingMovies.slice(0, 8).map((item) => (
 
                     <Link to={`movie/${item.id}`}>
                         <MovieCardOne title={item.title} image={`https://image.tmdb.org/t/p/w500${item.poster_path}`} view={Math.round(item.popularity)} />
@@ -42,6 +48,21 @@ function Home() {
 
                 ))}
             </div>
+
+            <div style={{ backgroundColor: "#1c1b1b", padding: "20px", borderRadius: "20px" }}>
+                <SubHeading text="Trending this week"/>
+                <div style={{ display: "flex", overflowX: "scroll", gap: "20px" }}>
+                    {trendingMovies.slice(0, 10).map((item) => (
+
+                        <Link to={`movie/${item.id}`}>
+                            <MovieCardFour title={item.title} image={`https://image.tmdb.org/t/p/w500${item.poster_path}`} views={Math.round(item.popularity)} />
+                        </Link>
+
+                    ))}
+                </div>
+            </div>
+
+
 
             <SubHeading text="Top Rated" />
 

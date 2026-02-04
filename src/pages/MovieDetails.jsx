@@ -5,7 +5,7 @@ import { BiTime } from "react-icons/bi";
 import PageBanners from "../components/PageBanners";
 
 function MovieDetails() {
-    const { id } = useParams()
+    const {id} = useParams()
     const [movie, setMovie] = useState(null)
     const [trailerKey, setTrailerKey] = useState(null)
 
@@ -27,7 +27,6 @@ function MovieDetails() {
     return (
         <>
             <PageBanners title="Movie Details" />
-
             <div className="moviedetails">
                 <div style={{ flex: 2 }}>
 

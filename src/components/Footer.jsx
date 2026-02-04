@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-top">
-                <h2>🎬 MITC TV</h2>
+                <h2>🎬 TakTube</h2>
                 <p>Your daily dose of movies, trailers & ratings.</p>
             </div>
 

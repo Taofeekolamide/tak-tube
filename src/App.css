@@ -163,6 +163,17 @@ header input {
   overflow: hidden
 }
 
+.moviecardfour {
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid white;
+  height: 388px;
+}
+
+.moviecardfour:hover {
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
 .info {
   position: absolute;
   bottom: 20px;
