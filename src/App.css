@@ -186,7 +186,7 @@ aside {
   height: 100%;
 }
 
-.moviecardfour:hover {
+.moviecardfouroverlay:hover {
   background-color: rgba(0, 0, 0, 0.349);
 }
 
@@ -283,8 +283,6 @@ hr {
 img {
   object-fit: cover;
 }
-
-
 
 /*home-hero*/
 .homehero {
@@ -416,7 +414,7 @@ img {
 /*mobile nav*/
 .mobilenav {
   padding: 25px;
-  width: 200px;
+  width: 220px;
   background-color: #1c1b1b;
   position: absolute;
   transform: translateX(-100%);
@@ -461,6 +459,13 @@ img {
 .searchresulttitle {
   font-size: 40px;
   padding-bottom: 20px;
+}
+
+/*contact*/
+.contactform {
+  background-color: #1c1b1b;
+  padding: 30px;
+  border-radius: 20px
 }
 
 .contactformgroup {
@@ -508,7 +513,7 @@ img {
   }
 
   .header {
-    width: 80%;
+    width: 85%;
 
   }
 
@@ -522,10 +527,6 @@ img {
 
   .homehero {
     height: 300px;
-  }
-
-  .heroitem {
-    height: 240px;
   }
 
   .heroitem p {
@@ -580,7 +581,6 @@ img {
   }
 
   .banneritem {
-    height: 120px;
     font-size: 20px;
   }
 
@@ -596,10 +596,11 @@ img {
     border-radius: 15px;
   }
 
-  .moviecardfouroverlay {
-    padding: 15px;
-    border-radius: 15px;
-    border: 1px solid white;
-    height: 318px;
+  .contactform {
+    padding: 10px;
+  }
+
+  .contactformgroup {
+    flex-direction: column;
   }
 }

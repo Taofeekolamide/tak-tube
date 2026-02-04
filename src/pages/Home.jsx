@@ -33,7 +33,7 @@ function Home() {
                 <div className="heroitem" >
                     <h1>Discover the latest from TakTube</h1>
                     <p>ScreenPal's intuitive tools help you capture, create, and share videos and images for authentic and effective visual communication.</p>
-                    <Link to="/movies"><BiPlay fontSize="40px" /><span>Watch Now</span></Link>
+                    <Link to="/movies"><BiPlay fontSize="20px" /><span>Watch Now</span></Link>
                 </div>
             </div>
 

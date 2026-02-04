@@ -8,7 +8,7 @@ function Navbar() {
         <>
             <div className="navbar">
 
-                <h1 style={{ fontSize: "40px" }}>🎬 TakTube</h1>
+                <h1 style={{ fontSize: "30px" }}>🎬 TakTube</h1>
                 <nav>
                     <Link to="/"><HiHome /> Home</Link>
                     <Link to="/about"><FaUser /> About</Link>

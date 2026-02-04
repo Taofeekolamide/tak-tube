@@ -11,7 +11,7 @@ function MobileNav() {
         <>
             <div className="mobilenav" style={{ transform: toggleNav ? "translateX(0%)" : "translateX(-100%)" }}>
 
-                <h1 style={{ fontSize: "30px" }}>🎬 TakTube</h1>
+                <h1 style={{ fontSize: "25px" }}>🎬 TakTube</h1>
                 <nav>
                     <Link onClick={() => setToggleNav(!toggleNav)} to="/"><HiHome /> Home</Link>
                     <Link onClick={() => setToggleNav(!toggleNav)} to="/about"><FaUser /> About</Link>
