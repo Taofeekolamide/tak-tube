@@ -13,15 +13,17 @@ header {
   display: var(--flex);
   align-items: var(--align-items-center);
   justify-content: space-between;
-  gap: 5px
+  gap: 5px;
 }
 
 .header {
   display: var(--flex);
   align-items: center;
   gap: 8px;
-  flex: 1;
   background-color: #1c1b1b;
+  border-radius: 50px;
+  padding: 10px;
+  height: 20px;
 }
 
 header input {
@@ -33,7 +35,8 @@ header input {
 
 .menu {
   color: white;
-
+  font-size: 25px;
+  display: none;
 }
 
 a {
@@ -467,10 +470,13 @@ img {
   }
 
   header {
-    padding: 15px;
+    padding: 10px;
   }
 
-  .header {}
+  .header {
+  width: 80%;
+
+  }
 
   .main {
     padding: 15px;
