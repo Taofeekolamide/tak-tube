@@ -37,7 +37,7 @@ function App() {
 
           <main>
             <Header />
-            <div style={{ padding: "25px" }}>
+            <div className="main">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

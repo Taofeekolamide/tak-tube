@@ -40,6 +40,10 @@ main {
   overflow: auto;
 }
 
+.main {
+  padding: 25px;
+}
+
 aside {
   background-color: #1c1b1b;
   width: fit-content;
@@ -164,6 +168,13 @@ header input {
 }
 
 .moviecardfour {
+  width: 270px;
+  height: 420px;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.moviecardfouroverlay {
   padding: 15px;
   border-radius: 15px;
   border: 1px solid white;
@@ -460,8 +471,16 @@ img {
     display: none;
   }
 
+  header {
+    padding: 15px;
+  }
+
   .header {
     width: fit-content;
+  }
+
+  .main {
+    padding: 15px;
   }
 
   .heroitem h1 {
@@ -535,5 +554,19 @@ img {
   .banneritem a,
   .banneritem span {
     font-size: 15px;
+  }
+
+  .moviecardfour {
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  .moviecardfouroverlay {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid white;
+    height: 318px;
   }
 }
