@@ -4,15 +4,17 @@ import Movies from "./pages/Movies";
 import MovieDetails from "./pages/MovieDetails";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import './App.css'
-import Search from "./pages/Search";
-import Footer from "./components/Footer";
-import NavToggle from "./components/Context";
-import { useEffect, useState } from "react";
-import MobileNav from "./components/MobileNav";
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Search from "./pages/Search";
+import Footer from "./components/Footer";
+import NavToggle from "./components/Context";
+import MobileNav from "./components/MobileNav";
+import './App.css'
+import { useEffect, useState } from "react";
+
+
 
 function App() {
   const [toggleNav, setToggleNav] = useState(false)
