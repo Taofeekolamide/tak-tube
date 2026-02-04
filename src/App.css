@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -182,7 +183,7 @@ aside {
   padding: 15px;
   border-radius: 15px;
   border: 1px solid white;
-  height: 388px;
+  height: 100%;
 }
 
 .moviecardfour:hover {
@@ -299,7 +300,7 @@ img {
 .heroitem {
   background-color: #0000006b;
   padding: 30px;
-  height: 340px;
+  height: 100%;
   border-radius: 30px;
   align-content: center;
 }
@@ -322,8 +323,8 @@ img {
   border-radius: 50px;
   display: flex;
   align-items: center;
-  width: 150px;
-  font-size: 20px;
+  width: fit-content;
+  font-size: 18px;
 }
 
 .heroitem a:hover {
@@ -344,7 +345,7 @@ img {
 .banneritem {
   background-color: #3030306b;
   padding: 30px;
-  height: 190px;
+  height: 100%;
   border-radius: 30px;
   align-content: center;
   text-align: center;
@@ -462,6 +463,37 @@ img {
   padding-bottom: 20px;
 }
 
+.contactformgroup {
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.contactform input,
+.contactform textarea {
+  padding: 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.contactformgroup button {
+  background-color: blueviolet;
+  font-Size: 20px;
+  border: none;
+  padding: 9px 20px;
+  border-Radius: 15px;
+  color: white;
+}
+
+.contactformgroup button:hover {
+  background-color: rgb(97, 35, 155);
+}
+
 @media (max-width: 992px) {
   .menu {
     display: block;
@@ -476,7 +508,7 @@ img {
   }
 
   .header {
-  width: 80%;
+    width: 80%;
 
   }
 
