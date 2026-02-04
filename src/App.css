@@ -9,25 +9,31 @@
 }
 
 header {
+  padding: 25px;
   display: var(--flex);
-  gap: 10px;
   align-items: var(--align-items-center);
   justify-content: space-between;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-  padding: 25px;
-  background-color: #000000;
+  gap: 5px
 }
 
 .header {
-  padding: 15px;
-  background-color: #1c1b1b;
-  border-radius: 30px;
   display: var(--flex);
-  align-items: var(--align-items-center);
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
   flex: 1;
+  background-color: #1c1b1b;
+}
+
+header input {
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  border: none;
+}
+
+.menu {
+  color: white;
+
 }
 
 a {
@@ -52,14 +58,7 @@ aside {
   height: fit-content;
 }
 
-header input {
-  outline: none;
-  font-size: 18px;
-  flex: 1;
-  background-color: transparent;
-  color: white;
-  border: none;
-}
+
 
 .navbar {
   padding: 25px;
@@ -279,11 +278,7 @@ img {
   object-fit: cover;
 }
 
-.menu {
-  display: none;
-  font-size: 30px;
-  color: white;
-}
+
 
 /*home-hero*/
 .homehero {
@@ -475,9 +470,7 @@ img {
     padding: 15px;
   }
 
-  .header {
-    width: fit-content;
-  }
+  .header {}
 
   .main {
     padding: 15px;

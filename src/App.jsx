@@ -22,7 +22,7 @@ function App() {
   const nav = useNavigate()
 
   useEffect(() => {
-    if (location.pathname != "/" && location.pathname != "/contact" && location.pathname != "/about" && location.pathname != "/movies" && !location.pathname.startsWith("/movie") && !location.pathname.startsWith("/movie")) {
+    if (location.pathname != "/" && location.pathname != "/contact" && location.pathname != "/about" && location.pathname != "/movies" && !location.pathname.startsWith("/movie") && !location.pathname.startsWith("/search")) {
       nav("/error")
     }
   }, [location.pathname])
