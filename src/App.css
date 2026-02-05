@@ -174,7 +174,7 @@ aside {
 
 .moviecardfour {
   width: 270px;
-  height: 420px;
+  height: 400px;
   background-size: cover;
   border-radius: 15px;
 }
@@ -182,7 +182,6 @@ aside {
 .moviecardfouroverlay {
   padding: 15px;
   border-radius: 15px;
-  border: 1px solid white;
   height: 100%;
 }
 
@@ -602,5 +601,13 @@ img {
 
   .contactformgroup {
     flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
   }
+
+  .contactform input,
+  .contactform textarea {
+    padding: 15px;
+  }
+
 }

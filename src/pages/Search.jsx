@@ -6,12 +6,13 @@ import { BiCalendar } from "react-icons/bi"
 import PageBanners from "../components/PageBanners"
 
 function Search() {
+    const API_Key = import.meta.env.VITE_TMDB_API_KEY
     const [search] = useSearchParams()
     const result = search.get("term")
     const [searches, setSearches] = useState([])
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=4632cb4de4b1105d34dd3404eeb90acd&query=${result}`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_Key}&query=${result}`)
             .then(res => res.json())
             .then(data => setSearches(data.results))
     }, [result])

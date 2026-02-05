@@ -7,21 +7,24 @@ import { BiPlay } from "react-icons/bi";
 import MovieCardFour from "../components/MovieCardFour";
 
 function Home() {
+
+    const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+
     const [upcomingMovies, setUpcomingMovies] = useState([])
     const [TopRatedMovies, setTopRatedMovies] = useState([])
     const [trendingMovies, setTrendingMovies] = useState([])
 
     useEffect(() => {
 
-        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=4632cb4de4b1105d34dd3404eeb90acd")
+        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
             .then(res => res.json())
             .then(data => setUpcomingMovies(data.results))
 
-        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4632cb4de4b1105d34dd3404eeb90acd")
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`)
             .then(res => res.json())
             .then(data => setTopRatedMovies(data.results))
 
-        fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=4632cb4de4b1105d34dd3404eeb90acd")
+        fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
             .then(res => res.json())
             .then(data => setTrendingMovies(data.results))
     }, [])
@@ -51,14 +54,14 @@ function Home() {
 
             <div style={{ backgroundColor: "#1c1b1b", padding: "20px", borderRadius: "20px" }}>
                 <SubHeading text="Trending this week"/>
-                <div style={{ display: "flex", overflowX: "scroll", gap: "20px" }}>
+                <div style={{ display: "flex", overflowX: "scroll", gap: "20px", height: "fit-content" }}>
                     {trendingMovies.slice(0, 10).map((item) => (
 
                         <Link to={`movie/${item.id}`}>
                             <MovieCardFour title={item.title} image={`https://image.tmdb.org/t/p/w500${item.poster_path}`} views={Math.round(item.popularity)} />
                         </Link>
 
-                    ))}
+                    ))} 
                 </div>
             </div>
 

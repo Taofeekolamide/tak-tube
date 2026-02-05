@@ -18,11 +18,16 @@ function Header() {
         navigate(`/search?term=${search}`)
     }
 
+    const SearchLinkEnter = (e) => {
+        if (e.key === "Enter" && search)
+            navigate(`/search?term=${search}`)
+    }
+
     return (
         <header>
 
             <div className="header">
-                <input type="text" placeholder="Search for a movie..." value={search} onChange={(e) => setSearch(e.target.value)} />
+                <input type="text" placeholder="Search for a movie..." value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={SearchLinkEnter} />
                 {search && <HiX color="#6b6b6b" fontSize="25px" onClick={clearInput} />}
                 {search && <BiSearch color="#6b6b6b" fontSize="25px" onClick={SearchLink} />}
             </div>
