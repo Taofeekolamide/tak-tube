@@ -5,9 +5,10 @@ import { BiTime } from "react-icons/bi";
 import PageBanners from "../components/PageBanners";
 
 function MovieDetails() {
-    const {id} = useParams()
+    const { id } = useParams()
     const [movie, setMovie] = useState(null)
     const [trailerKey, setTrailerKey] = useState(null)
+    const [hoverLoad, setHoverLoad] = useState(false)
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4632cb4de4b1105d34dd3404eeb90acd`)
@@ -30,14 +31,14 @@ function MovieDetails() {
             <div className="moviedetails">
                 <div style={{ flex: 2 }}>
 
-                    {trailerKey && <iframe
+                    {trailerKey && <iframe onMouseOver={() => setHoverLoad(true)} onMouseOut={() => setHoverLoad(false)}
                         width="100%" style={{ borderRadius: "10px" }}
                         height="500"
-                        src={`https://www.youtube.com/embed/${trailerKey}`}
+                        src={`https://www.youtube.com/embed/${trailerKey}?autoplay=${hoverLoad ? 1 : 0}&mute=1`}
                         title="Movie Trailer"
                         allowFullScreen
                     />}
-                    
+
                     <p className="duration"><BiTime /> {Math.floor(movie.runtime / 60)} Hour {movie.runtime % 60} Mins</p>
                     <h1 style={{ paddingTop: "20px", paddingBottom: "20px" }}>{movie.title}</h1>
                     <hr />
