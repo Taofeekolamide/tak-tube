@@ -5,18 +5,16 @@ import { BiTime } from "react-icons/bi";
 import PageBanners from "../components/PageBanners";
 
 function MovieDetails() {
-
-    const API_KEY = import.meta.env.VITE_TMDB_API_KEY
     const {id} = useParams()
     const [movie, setMovie] = useState(null)
     const [trailerKey, setTrailerKey] = useState(null)
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4632cb4de4b1105d34dd3404eeb90acd`)
             .then(res => res.json())
             .then(data => setMovie(data))
 
-        fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`)
+        fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=4632cb4de4b1105d34dd3404eeb90acd`)
             .then(res => res.json())
             .then(data => {
                 const trailer = data.results.find(v => v.type === "Clip" && v.site === "YouTube")

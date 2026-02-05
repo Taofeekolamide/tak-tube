@@ -8,23 +8,22 @@ import MovieCardFour from "../components/MovieCardFour";
 
 function Home() {
 
-    const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-
+    
     const [upcomingMovies, setUpcomingMovies] = useState([])
     const [TopRatedMovies, setTopRatedMovies] = useState([])
     const [trendingMovies, setTrendingMovies] = useState([])
 
     useEffect(() => {
 
-        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
+        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=4632cb4de4b1105d34dd3404eeb90acd")
             .then(res => res.json())
             .then(data => setUpcomingMovies(data.results))
 
-        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`)
+        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4632cb4de4b1105d34dd3404eeb90acd")
             .then(res => res.json())
             .then(data => setTopRatedMovies(data.results))
 
-        fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
+        fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=4632cb4de4b1105d34dd3404eeb90acd")
             .then(res => res.json())
             .then(data => setTrendingMovies(data.results))
     }, [])

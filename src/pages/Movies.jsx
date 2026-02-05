@@ -5,11 +5,10 @@ import MovieCardThree from "../components/MovieCerdThree"
 import PageBanners from "../components/PageBanners"
 
 function Movies() {
-    const API_KEY = import.meta.env.VITE_TMDB_API_KEY
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
+        fetch("https://api.themoviedb.org/3/movie/popular?api_key=4632cb4de4b1105d34dd3404eeb90acd")
             .then(res => res.json())
             .then(data => setMovies(data.results))
     }, [])
