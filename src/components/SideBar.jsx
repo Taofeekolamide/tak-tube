@@ -5,10 +5,11 @@ import { BsEye } from "react-icons/bs"
 import { BiCalendar } from "react-icons/bi"
 
 function SideBar() {
+    const API_KEY = import.meta.env.VITE_TMDB_API_KEY
     const [sideMovies, setSideMovies] = useState([])
 
     useEffect(() => {
-        fetch("https://api.themoviedb.org/3/movie/popular?api_key=4632cb4de4b1105d34dd3404eeb90acd")
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
             .then(res => res.json())
             .then(data => setSideMovies(data.results))
     }, [])
